@@ -1,51 +1,54 @@
-<mxfile host="app.diagrams.net" modified="2021-12-20T09:13:00.835Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Edg/96.0.1054.57" etag="ltuc6FPdHWyO0X4yipxQ" version="16.0.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-20T09:41:21.530Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Edg/96.0.1054.57" etag="Oj1INzJ6zi8OAesB7ZBt" version="16.0.0" type="github">
   <diagram id="2zftxFfZJoa_WkWcQfK9" name="Page-1">
-    <mxGraphModel dx="3850" dy="3102" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3245" dy="2715" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="9TWHAg7jtCrfxQBwRMBd-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" parent="1" source="9TWHAg7jtCrfxQBwRMBd-1" target="9TWHAg7jtCrfxQBwRMBd-4" edge="1">
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" edge="1" parent="1" source="9TWHAg7jtCrfxQBwRMBd-1" target="9TWHAg7jtCrfxQBwRMBd-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="9TWHAg7jtCrfxQBwRMBd-1" value="main" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-160" y="410" width="190" height="60" as="geometry" />
+          <mxGeometry x="-470" y="485" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="9TWHAg7jtCrfxQBwRMBd-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" parent="1" source="9TWHAg7jtCrfxQBwRMBd-4" target="9TWHAg7jtCrfxQBwRMBd-6" edge="1">
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" edge="1" parent="1" source="9TWHAg7jtCrfxQBwRMBd-4" target="qlo0mlUVnGcfUICEwcEb-14">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="310" y="430" as="targetPoint" />
+            <mxPoint x="80.09523809523807" y="860" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9TWHAg7jtCrfxQBwRMBd-4" value="initServer&lt;br&gt;初始化server" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);fillColor=rgb(255, 255, 255);" parent="1" vertex="1">
-          <mxGeometry x="80" y="410" width="120" height="60" as="geometry" />
+        <mxCell id="9TWHAg7jtCrfxQBwRMBd-4" value="initServer&lt;br&gt;初始化server" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;strokeColor=#82b366;fillColor=#d5e8d4;" parent="1" vertex="1">
+          <mxGeometry x="20" y="280" width="120" height="470" as="geometry" />
         </mxCell>
         <mxCell id="9TWHAg7jtCrfxQBwRMBd-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" parent="1" source="9TWHAg7jtCrfxQBwRMBd-6" target="9TWHAg7jtCrfxQBwRMBd-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" edge="1" parent="1" source="9TWHAg7jtCrfxQBwRMBd-6" target="9TWHAg7jtCrfxQBwRMBd-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="9TWHAg7jtCrfxQBwRMBd-6" value="&lt;pre style=&quot;background-color: #2b2b2b ; color: #a9b7c6 ; font-family: &amp;#34;jetbrains mono&amp;#34; , monospace ; font-size: 9.8pt&quot;&gt;&lt;/pre&gt;listenToPort&lt;br&gt;监听端口" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);fillColor=rgb(255, 255, 255);" parent="1" vertex="1">
-          <mxGeometry x="240" y="410" width="120" height="60" as="geometry" />
+          <mxGeometry x="170" y="380" width="260" height="60" as="geometry" />
         </mxCell>
         <mxCell id="9TWHAg7jtCrfxQBwRMBd-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" parent="1" source="9TWHAg7jtCrfxQBwRMBd-7" target="9TWHAg7jtCrfxQBwRMBd-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="9TWHAg7jtCrfxQBwRMBd-7" value="aeCreateTimeEvent&lt;br&gt;创建时间使事件" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);fillColor=rgb(255, 255, 255);" parent="1" vertex="1">
-          <mxGeometry x="260" y="490" width="120" height="60" as="geometry" />
+          <mxGeometry x="170" y="490" width="260" height="60" as="geometry" />
         </mxCell>
         <mxCell id="9TWHAg7jtCrfxQBwRMBd-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" parent="1" source="9TWHAg7jtCrfxQBwRMBd-9" target="9TWHAg7jtCrfxQBwRMBd-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="9TWHAg7jtCrfxQBwRMBd-9" value="createSocketAcceptHandler&lt;br&gt;创建socket处理事件" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);fillColor=rgb(255, 255, 255);" parent="1" vertex="1">
-          <mxGeometry x="240" y="584.5" width="160" height="60" as="geometry" />
+          <mxGeometry x="170" y="588" width="260" height="53" as="geometry" />
         </mxCell>
         <mxCell id="9TWHAg7jtCrfxQBwRMBd-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" parent="1" source="9TWHAg7jtCrfxQBwRMBd-11" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="740" y="615" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="9TWHAg7jtCrfxQBwRMBd-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" parent="1" source="9TWHAg7jtCrfxQBwRMBd-11" target="9TWHAg7jtCrfxQBwRMBd-69" edge="1">
+        <mxCell id="9TWHAg7jtCrfxQBwRMBd-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="9TWHAg7jtCrfxQBwRMBd-9" target="9TWHAg7jtCrfxQBwRMBd-69" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="9TWHAg7jtCrfxQBwRMBd-11" value="aeCreateFileEvent&lt;br&gt;创建IO事件" style="whiteSpace=wrap;html=1;fillColor=rgb(255, 255, 255);strokeColor=rgb(0, 0, 0);fontColor=rgb(0, 0, 0);rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="430" y="587" width="260" height="55" as="geometry" />
+          <mxGeometry x="470" y="587" width="260" height="55" as="geometry" />
         </mxCell>
         <mxCell id="9TWHAg7jtCrfxQBwRMBd-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="9TWHAg7jtCrfxQBwRMBd-15" target="9TWHAg7jtCrfxQBwRMBd-46" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -109,16 +112,8 @@
         <mxCell id="9TWHAg7jtCrfxQBwRMBd-67" value="&lt;div&gt;static void acceptCommonHandler(connection *conn, int flags, char *ip) {&lt;/div&gt;&lt;div&gt;&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; /* Create connection and client */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; if ((c = createClient(conn)) == NULL) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; serverLog(LL_WARNING,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;Error registering fd event for the new client: %s (conn: %s)&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; connGetLastError(conn),&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; connGetInfo(conn, conninfo, sizeof(conninfo)));&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; connClose(conn); /* May be already closed, just ignore errors */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; /* Last chance to keep flags */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; c-&amp;gt;flags |= flags;&lt;/div&gt;&lt;div&gt;&lt;span&gt;		&lt;/span&gt;if (connAccept(conn, clientAcceptHandler) == C_ERR) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; char conninfo[100];&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (connGetState(conn) == CONN_STATE_ERROR)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; serverLog(LL_WARNING,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;Error accepting a client connection: %s (conn: %s)&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; connGetLastError(conn), connGetInfo(conn, conninfo, sizeof(conninfo)));&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; freeClient(connGetPrivateData(conn));&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;strokeColor=#d6b656;fillColor=#fff2cc;align=left;" parent="1" vertex="1">
           <mxGeometry x="80" y="-430" width="390" height="380" as="geometry" />
         </mxCell>
-        <mxCell id="9TWHAg7jtCrfxQBwRMBd-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" parent="1" source="9TWHAg7jtCrfxQBwRMBd-69" target="9TWHAg7jtCrfxQBwRMBd-72" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="740" y="760" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="9TWHAg7jtCrfxQBwRMBd-69" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; aeSetBeforeSleepProc(server.el,beforeSleep);&lt;/div&gt;&lt;div&gt;aeSetAfterSleepProc(server.el,afterSleep);&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=rgb(255, 255, 255);strokeColor=rgb(0, 0, 0);fontColor=rgb(0, 0, 0);rounded=0;align=left;" parent="1" vertex="1">
-          <mxGeometry x="430" y="730" width="260" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="9TWHAg7jtCrfxQBwRMBd-72" value="" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;strokeColor=#d6b656;fillColor=#fff2cc;" parent="1" vertex="1">
-          <mxGeometry x="750" y="730" width="380" height="230" as="geometry" />
+          <mxGeometry x="170" y="690" width="260" height="60" as="geometry" />
         </mxCell>
         <mxCell id="qlo0mlUVnGcfUICEwcEb-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" edge="1" parent="1" source="9TWHAg7jtCrfxQBwRMBd-73" target="9TWHAg7jtCrfxQBwRMBd-78">
           <mxGeometry relative="1" as="geometry" />
@@ -147,6 +142,47 @@
         </mxCell>
         <mxCell id="9TWHAg7jtCrfxQBwRMBd-78" value="&lt;div&gt;static int connSocketSetReadHandler(connection *conn, ConnectionCallbackFunc func) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; if (func == conn-&amp;gt;read_handler) return C_OK;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; conn-&amp;gt;read_handler = func;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; if (!conn-&amp;gt;read_handler)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; aeDeleteFileEvent(server.el,conn-&amp;gt;fd,AE_READABLE);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; else&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (aeCreateFileEvent(server.el,conn-&amp;gt;fd,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; AE_READABLE,conn-&amp;gt;type-&amp;gt;ae_handler,conn) == AE_ERR) return C_ERR;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; return C_OK;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=rgb(0, 0, 0);rounded=1;" parent="1" vertex="1">
           <mxGeometry x="1100" y="-679" width="350" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" edge="1" parent="1" source="qlo0mlUVnGcfUICEwcEb-8" target="9TWHAg7jtCrfxQBwRMBd-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" edge="1" parent="1" source="qlo0mlUVnGcfUICEwcEb-8" target="9TWHAg7jtCrfxQBwRMBd-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-11" value="创建eventLoop" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontFamily=Helvetica;fontColor=rgb(0, 0, 0);" vertex="1" connectable="0" parent="qlo0mlUVnGcfUICEwcEb-10">
+          <mxGeometry x="-0.3167" y="4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-8" value="aeCreateEventLoop&lt;br&gt;创建eventLoop" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);fillColor=rgb(255, 255, 255);" vertex="1" parent="1">
+          <mxGeometry x="170" y="280" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" edge="1" parent="1" source="qlo0mlUVnGcfUICEwcEb-14" target="qlo0mlUVnGcfUICEwcEb-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="870.238095238095" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-14" value="InitServerLast&lt;br&gt;创建线程" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);fillColor=rgb(255, 255, 255);" vertex="1" parent="1">
+          <mxGeometry x="19.995238095238072" y="840" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" edge="1" parent="1" source="qlo0mlUVnGcfUICEwcEb-17" target="qlo0mlUVnGcfUICEwcEb-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="870.238095238095" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-17" value="initThreadedIO&lt;br&gt;创建redis和write线程" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);fillColor=rgb(255, 255, 255);" vertex="1" parent="1">
+          <mxGeometry x="170" y="840" width="270" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-24" value="创建的线程无限循环执行" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);" edge="1" parent="1" source="qlo0mlUVnGcfUICEwcEb-20" target="qlo0mlUVnGcfUICEwcEb-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-20" value="&lt;div&gt;void initThreadedIO(void) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; server.io_threads_active = 0;&amp;nbsp; //开关线程开关&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; if (server.io_threads_num == 1) return;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; if (server.io_threads_num &amp;gt; IO_THREADS_MAX_NUM) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; serverLog(LL_WARNING,&quot;Fatal: too many I/O threads configured. &quot;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&quot;The maximum number is %d.&quot;, IO_THREADS_MAX_NUM);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; exit(1);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; /* Spawn and initialize the I/O threads. */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; for (int i = 0; i &amp;lt; server.io_threads_num; i++) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; /* Things we do for all the threads including the main thread. */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; io_threads_list[i] = listCreate();&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (i == 0) continue; /* Thread 0 is the main thread. */&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; /* Things we do only for the additional threads. */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; pthread_t tid;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; pthread_mutex_init(&amp;amp;io_threads_mutex[i],NULL);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; setIOPendingCount(i, 0);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; pthread_mutex_lock(&amp;amp;io_threads_mutex[i]); /* Thread will be stopped. */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (pthread_create(&amp;amp;tid,NULL,IOThreadMain,(void*)(long)i) != 0) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; serverLog(LL_WARNING,&quot;Fatal: Can&#39;t initialize IO thread.&quot;);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; exit(1);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; io_threads[i] = tid;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;strokeColor=#d6b656;fillColor=#fff2cc;align=left;" vertex="1" parent="1">
+          <mxGeometry x="560" y="700" width="390" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="qlo0mlUVnGcfUICEwcEb-25" value="&lt;div&gt;void *IOThreadMain(void *myid) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; long id = (unsigned long)myid;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; char thdname[16];&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; snprintf(thdname, sizeof(thdname), &quot;io_thd_%ld&quot;, id);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; redis_set_thread_title(thdname);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; redisSetCpuAffinity(server.server_cpulist);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; makeThreadKillable();&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; while(1) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; /* Wait for start */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for (int j = 0; j &amp;lt; 1000000; j++) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (getIOPendingCount(id) != 0) break;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; /* Give the main thread a chance to stop this thread. */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (getIOPendingCount(id) == 0) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; pthread_mutex_lock(&amp;amp;io_threads_mutex[id]);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; pthread_mutex_unlock(&amp;amp;io_threads_mutex[id]);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; continue;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; serverAssert(getIOPendingCount(id) != 0);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; listIter li;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; listNode *ln;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; listRewind(io_threads_list[id],&amp;amp;li);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; while((ln = listNext(&amp;amp;li))) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; client *c = listNodeValue(ln);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (io_threads_op == IO_THREADS_OP_WRITE) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; writeToClient(c,0);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } else if (io_threads_op == IO_THREADS_OP_READ) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; readQueryFromClient(c-&amp;gt;conn);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } else {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; serverPanic(&quot;io_threads_op value is unknown&quot;);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; listEmpty(io_threads_list[id]);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; setIOPendingCount(id, 0);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;strokeColor=#d6b656;fillColor=#fff2cc;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="685" width="480" height="550" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
