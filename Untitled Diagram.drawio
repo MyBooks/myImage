@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-12-21T02:52:16.922Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Edg/96.0.1054.62" etag="ZCUyw0nSodd8qOn8iMlD" version="16.0.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-22T14:44:14.054Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36 Edg/96.0.1054.62" etag="Zam--Q85ZeVG_BZH_qMe" version="16.0.3" type="github">
   <diagram id="2zftxFfZJoa_WkWcQfK9" name="Page-1">
-    <mxGraphModel dx="2036" dy="1942" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3197" dy="2479" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -187,7 +187,7 @@
         <mxCell id="qlo0mlUVnGcfUICEwcEb-25" value="&lt;div&gt;void *IOThreadMain(void *myid) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; long id = (unsigned long)myid;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; char thdname[16];&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; snprintf(thdname, sizeof(thdname), &quot;io_thd_%ld&quot;, id);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; redis_set_thread_title(thdname);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; redisSetCpuAffinity(server.server_cpulist);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; makeThreadKillable();&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; while(1) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; /* Wait for start */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for (int j = 0; j &amp;lt; 1000000; j++) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (getIOPendingCount(id) != 0) break;&amp;nbsp; &amp;nbsp; // 关键字段当自己不为1时会启动后续的处理&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; /* Give the main thread a chance to stop this thread. */&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (getIOPendingCount(id) == 0) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; pthread_mutex_lock(&amp;amp;io_threads_mutex[id]);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; pthread_mutex_unlock(&amp;amp;io_threads_mutex[id]);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; continue;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; serverAssert(getIOPendingCount(id) != 0);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; listIter li;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; listNode *ln;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; listRewind(io_threads_list[id],&amp;amp;li);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; while((ln = listNext(&amp;amp;li))) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; client *c = listNodeValue(ln);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (io_threads_op == IO_THREADS_OP_WRITE) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; writeToClient(c,0);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } else if (io_threads_op == IO_THREADS_OP_READ) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; readQueryFromClient(c-&amp;gt;conn);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } else {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; serverPanic(&quot;io_threads_op value is unknown&quot;);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; listEmpty(io_threads_list[id]);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; setIOPendingCount(id, 0);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;strokeColor=#d6b656;fillColor=#fff2cc;align=left;" parent="1" vertex="1">
           <mxGeometry x="1110" y="685" width="480" height="550" as="geometry" />
         </mxCell>
-        <mxCell id="4nyj4klO3G2oLCyZbont-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="qlo0mlUVnGcfUICEwcEb-27" target="4nyj4klO3G2oLCyZbont-1">
+        <mxCell id="4nyj4klO3G2oLCyZbont-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="qlo0mlUVnGcfUICEwcEb-27" target="4nyj4klO3G2oLCyZbont-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="190" y="1570" as="sourcePoint" />
           </mxGeometry>
@@ -195,23 +195,90 @@
         <mxCell id="qlo0mlUVnGcfUICEwcEb-27" value="aeMain&lt;br&gt;无线循环" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=rgb(0, 0, 0);rounded=0;" parent="1" vertex="1">
           <mxGeometry x="20" y="1540" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4nyj4klO3G2oLCyZbont-1" value="aeProcessEvents&lt;br&gt;无限循环处理事件" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+        <mxCell id="4nyj4klO3G2oLCyZbont-1" value="aeProcessEvents&lt;br&gt;无限循环处理事件" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="190" y="1380" width="90" height="380" as="geometry" />
         </mxCell>
-        <mxCell id="4nyj4klO3G2oLCyZbont-3" value="beforesleep" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+        <mxCell id="4nyj4klO3G2oLCyZbont-3" value="beforesleep" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="300" y="1380" width="190" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="4nyj4klO3G2oLCyZbont-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4nyj4klO3G2oLCyZbont-9" target="4nyj4klO3G2oLCyZbont-11">
+        <mxCell id="4nyj4klO3G2oLCyZbont-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="4nyj4klO3G2oLCyZbont-9" target="5vcg4FEDXqoZApZjn7Ma-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="1560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4nyj4klO3G2oLCyZbont-9" value="aeApiPoll" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1500" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4nyj4klO3G2oLCyZbont-10" value="aftersleep" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="1600" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="5vcg4FEDXqoZApZjn7Ma-1" target="5vcg4FEDXqoZApZjn7Ma-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4nyj4klO3G2oLCyZbont-9" value="aeApiPoll" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="300" y="1530" width="190" height="60" as="geometry" />
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-5" value="事件" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5vcg4FEDXqoZApZjn7Ma-4">
+          <mxGeometry x="-0.1659" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="4nyj4klO3G2oLCyZbont-10" value="aftersleep" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-1" value="&lt;div&gt;static int aeApiPoll(aeEventLoop *eventLoop, struct timeval *tvp) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; aeApiState *state = eventLoop-&amp;gt;apidata;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; int retval, numevents = 0;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; retval = epoll_wait(state-&amp;gt;epfd,state-&amp;gt;events,eventLoop-&amp;gt;setsize,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; tvp ? (tvp-&amp;gt;tv_sec*1000 + (tvp-&amp;gt;tv_usec + 999)/1000) : -1);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; if (retval &amp;gt; 0) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int j;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; numevents = retval;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; for (j = 0; j &amp;lt; numevents; j++) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; int mask = 0;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; struct epoll_event *e = state-&amp;gt;events+j;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (e-&amp;gt;events &amp;amp; EPOLLIN) mask |= AE_READABLE;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (e-&amp;gt;events &amp;amp; EPOLLOUT) mask |= AE_WRITABLE;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (e-&amp;gt;events &amp;amp; EPOLLERR) mask |= AE_WRITABLE|AE_READABLE;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (e-&amp;gt;events &amp;amp; EPOLLHUP) mask |= AE_WRITABLE|AE_READABLE;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; eventLoop-&amp;gt;fired[j].fd = e-&amp;gt;data.fd;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; eventLoop-&amp;gt;fired[j].mask = mask;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; return numevents;&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;align=left;" vertex="1" parent="1">
+          <mxGeometry x="740" y="1300" width="370" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5vcg4FEDXqoZApZjn7Ma-3" target="5vcg4FEDXqoZApZjn7Ma-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="1870" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-22" value="使用它去处理生产客户端" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="5vcg4FEDXqoZApZjn7Ma-6">
+          <mxGeometry x="-0.5309" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-3" value="for循环调用对应的event进行处理" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="300" y="1700" width="200" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4nyj4klO3G2oLCyZbont-11" value="" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="560" y="1530" width="210" height="60" as="geometry" />
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-15" value="EVENTS" style="shape=table;startSize=40;container=1;collapsible=0;childLayout=tableLayout;fontStyle=1;align=center;pointerEvents=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);fillColor=rgb(255, 255, 255);html=1;" vertex="1" parent="1">
+          <mxGeometry x="567" y="1940" width="120" height="158" as="geometry" />
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-16" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);" vertex="1" parent="5vcg4FEDXqoZApZjn7Ma-15">
+          <mxGeometry y="40" width="120" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-17" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;acceptTcpHandler&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);align=center;verticalAlign=middle;" vertex="1" parent="5vcg4FEDXqoZApZjn7Ma-16">
+          <mxGeometry width="120" height="44" as="geometry">
+            <mxRectangle width="120" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-18" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);" vertex="1" parent="5vcg4FEDXqoZApZjn7Ma-15">
+          <mxGeometry y="84" width="120" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-19" value="readQueryFromClient" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);" vertex="1" parent="5vcg4FEDXqoZApZjn7Ma-18">
+          <mxGeometry width="120" height="37" as="geometry">
+            <mxRectangle width="120" height="37" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-20" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);" vertex="1" parent="5vcg4FEDXqoZApZjn7Ma-15">
+          <mxGeometry y="121" width="120" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-21" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;overflow=hidden;pointerEvents=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=rgb(0, 0, 0);strokeColor=rgb(0, 0, 0);" vertex="1" parent="5vcg4FEDXqoZApZjn7Ma-20">
+          <mxGeometry width="120" height="37" as="geometry">
+            <mxRectangle width="120" height="37" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="5vcg4FEDXqoZApZjn7Ma-18" target="5vcg4FEDXqoZApZjn7Ma-24">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="827" y="2042.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-24" value="readQueryFromClient" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="1817.5" width="140" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-26" value="&lt;br&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: left ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;postponeClientRead&lt;br&gt;&lt;/span&gt;分配线程处理" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1817.5" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-27" value="处理IO" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="2012.5" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5vcg4FEDXqoZApZjn7Ma-28" value="处理命令" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="2190" width="190" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
